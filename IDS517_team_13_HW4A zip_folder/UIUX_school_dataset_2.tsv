@@ -1,0 +1,31 @@
+School_ID	Ranking	School	Program	Length_Of_Program	Total_Tuition	Location	TOEFL 	GRE 	Portfolio 	Deadline
+001	1	Camegie Mellon University	Master of Human-Computer Interaction (MHCI)	1	 $ 72,000 	Pittsburgh PA	100	Y	Optional	Jan 20, 2022
+001	2	Camegie Mellon University	Master of Design (MDes)	2	 $ 84,000 	Pittsburgh PA	102	Y	Required	Jan 15, 2022
+002	3	University of Washington	Master of Human-Computer Interaction and Design (MHCID)	1	 $ 52,704 	Seattle WA	106	N	Optional	Jan 16, 2022
+002	4	University of Washington	M.S in Human Centered Design & Engineering (HCDI)	2	 $ 41,280 	Seattle WA	106	N	Required	Jan 17, 2022
+002	5	University of Washington	M.S in Technology Innovation (MST)	1.5	 $ 54,000 	Bellevue WA	100	N	Optional	Jan 18, 2022
+003	6	Standford University	M.S in Design Impact (DI)	2	 $ 75,240 	Standford CA	100	N	Required	Dec 01, 2021
+004	7	Georgia Tech	Master of Human Computer Interaction (MS- HCI)	2	 $ 70,816 	Atlanta GA	100	Y	Optional	Feb 01, 2022
+005	8	Massachusetts Institute of Technology	Media Arts and Science (MAS)	2	 $ 53,450 	Cambridge MA	100	N	Required	Dec 01, 2021
+006	9	Parson School of Design	M.F.A in Design and Technology (DT)	2	 $ 103,500 	New York NY	92	N	Required	Jan 02, 2022
+007	10	New York University	Interactive Telecommunications Program Master of Professional Studies (ITP MPS)	2	 $ 115,680 	New York NY	92	N	Required	Dec 01, 2021
+008	11	UC Berkeley	Master of Information Management and Systems (MIMS)	2	 $ 81,261 	Berkeley CA	90	N	Required	Jan 06, 2022
+008	12	UC Berkeley	Master of Design (MDes)	1.5	 $ 73,130 	Berkeley CA	90	N	Required	Jan 04, 2022
+009	13	Pratt Institute	M.S in Information Experience Design (IXD)	2	 $ 54,000 	New York NY	79	N	Optional	Jan 05, 2022
+010	14	California College of the Arts	MDes in Interaction Design	1	 $ 63,900 	San Francisco CA	100	N	Required	Jan 10, 2022
+011	15	School of Visual Arts	M.F.A in Interaction Design (IxD)	2	 $ 103,720 	New York NY	79	N	Required	Jan 15, 2022
+012	16	University of Michigan	M.S in Information (MSI)	2	 $ 96,480 	Ann Arbor MI	102	N	Required	Jan 15, 2022
+013	17	Indiana University Bloomington	M.S in Human Computer Interaction (HCI/ d)	2	 $ 57,025 	Bloomington IN	100	Y	Required	Jan 15, 2022
+014	18	Cornell University	Information Science Master of Professional Studies (MPS)	1	 $ 58,586 	Ithaca NY	79	Y	Required	Jan 01, 2022
+015	19	Purdue University	M.S in Computer Graphics Technology (CGTHCDD)	2	 $ 57,588 	West lafayette IN	80	Y	Required	Feb 01, 2022
+016	20	University of Mayland	M.S in Human Computer Interaction (HCIM)	2	 $ 53,090 	College Park MD	96	Y	Required	Jan 15, 2022
+017	21	Rochester Institute of Technology	M.S in Human Computer Interaction (HCI)	2	 $ 100,272 	Rochester NY	88	Y	Required	Feb 15, 2022
+018	22	Arizon State University	M.S in User Experience (UX)	2	 $ 42,000 	Mesa AZ	80	N	Required	Apr 01, 2022
+019	23	University of Texas at Austin	M.S in Information Studies	2	 $ 39,572 	Austin TX	79	N	Required	Feb 01, 2022
+020	24	Illinois Institute of Technology	Master of Design (MDes)	2	 $ 98,004 	Chicago IL	100	N	Optional	Jan 22, 2022
+021	25	Northwestern University	M.S in Engineering Design Innovation (EDI)	1.5	 $ 78,372 	Evanston IL	95	N	Required	Jan 15, 2022
+022	26	Depaul University	M.S in Human Computer Interaction	2.5	 $ 44,980 	Chicago IL	80	N	Required	Jun 15, 2022
+022	27	Depaul University	MS in Experience Design	2.5	 $ 44,980 	Chicago IL	80	N	Optional	Jun 15, 2022
+023	28	Rice University	Master of Human Computer Interaction and Human Factors (MHCIHF)	2	 $ 70,000 	Houston TX	90	N	Required	Dec 01, 2021
+024	29	Northeastern University	M.S in Experience Design	1	 $ 53,120 	Boston MA	100	N	Required	Feb 01, 2022
+025	30	UC Irvine	Master of Human Computer interaction & Design (MHCID)	1	 $ 49,500 	Irvine CA	80	N	Required	Mar 15, 2022
