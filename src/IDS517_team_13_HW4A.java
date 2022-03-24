@@ -131,6 +131,9 @@ public class IDS517_team_13_HW4A {
                         String length = sc.nextLine();
                         System.out.println("Total Tution of the program");
                         String tuition = sc.nextLine();
+                        if (!tuition.contains("$")) {
+                            tuition = "$ " + tuition;
+                        }
                         System.out.println("Location of the college");
                         String location = sc.nextLine();
                         System.out.println("Enter the minimum TOEFL Score of the program");
@@ -148,17 +151,20 @@ public class IDS517_team_13_HW4A {
                     
                     case "2":
                         System.out.println("1. Delete the most recent data");
-                        command = sc.next();
-                        //schoolDatasetList = SchoolDatasetMaintainer.addProgram(command, command, command, command, command, command, command, command, command, command, command);
-                        
-                        //changed to .equals because you cannot use == to compare strings
-                        if (command.equals("1")) {
-                            //schoolDatasetList = SchoolDatasetMaintainer.deleteMostRecent();
-                        } else if (command.equals("2")) {
+                        System.out.println("2. Delete by ranking");
 
-                        } else
-                            break;
-                        
+                        command = sc.nextLine();
+                        switch(command) {
+                            case "1":
+                                SchoolDatasetMaintainer schoolDatasetMaintainer = new SchoolDatasetMaintainer();
+                                schoolDatasetMaintainer.deleteMostRecent();
+                                break;
+                            case "2":
+                                System.out.println("What rank would you like to delete?");
+                                command = sc.nextLine();
+                                SchoolDatasetMaintainer.deleteProgramByRank(command);
+                                break;
+                        }
                     case "0":
                     	System.out.println("Bye!!");
                         break;

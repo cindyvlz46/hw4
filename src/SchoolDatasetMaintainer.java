@@ -9,49 +9,71 @@ public class SchoolDatasetMaintainer {
 	public SchoolDataset[] schoolDatasetList;
 	
 	public SchoolDatasetMaintainer() throws IOException {
-	 schoolDatasetList = CsvReader.read();
+	 	schoolDatasetList = CsvReader.read();
+	}
+
+	public void writeFile(SchoolDataset[] newschoolDataset) throws IOException {
+		File file = new File("/Users/reinhardt.vanwyk/Slalom/Personal/hw4/UIUX_school_dataset_2.tsv");
+		// create FileWriter object with file as parameter
+		FileWriter outputfile = new FileWriter(file);
+
+		// create CSVWriter object filewriter object as parameter
+		//  CSVWriter writer = new CSVWriter(outputfile);
+
+
+
+		CSVWriter writer = new CSVWriter(outputfile, '\t', CSVWriter.NO_QUOTE_CHARACTER,
+				CSVWriter.DEFAULT_ESCAPE_CHARACTER,
+				CSVWriter.DEFAULT_LINE_END);
+
+		//adding header to csv
+		String[] header = { "schoolID", "ranking", "school", "program", "lengthOfProgram", "totalTuition", "location", "toefl", "gre", "portfolio", "deadline" };
+		writer.writeNext(header);
+
+		for (int i = 0; i < newschoolDataset.length; i++) {
+			String[] data1 = {newschoolDataset[i].schoolID,newschoolDataset[i].ranking, newschoolDataset[i].school, newschoolDataset[i].program,newschoolDataset[i].lengthOfProgram, newschoolDataset[i].totalTuition, newschoolDataset[i].location, newschoolDataset[i].toefl, newschoolDataset[i].gre, newschoolDataset[i].portfolio, newschoolDataset[i].deadline };
+			writer.writeNext(data1);
+		}
+		writer.flush();
+		writer.close();
+	}
+
+	public static void deleteProgramByRank(String rank) throws IOException {
+		SchoolDatasetMaintainer schoolDatasetMaintainer = new SchoolDatasetMaintainer();
+		SchoolDataset[] schoolDatasetList = schoolDatasetMaintainer.schoolDatasetList;
+		SchoolDataset[] newSchoolDatasetList = new SchoolDataset[schoolDatasetList.length - 1];
+		int index = 0;
+		for(SchoolDataset schoolDataset: schoolDatasetList) {
+			if (!schoolDataset.ranking.equals(rank)) {
+				if (Integer.parseInt(schoolDataset.ranking) > Integer.parseInt(rank)) {
+					int newRanking = Integer.parseInt(schoolDataset.ranking) - 1;
+					schoolDataset.ranking = String.valueOf(newRanking);
+				}
+				newSchoolDatasetList[index] = schoolDataset;
+				index++;
+			}
+		}
+		schoolDatasetMaintainer.writeFile(newSchoolDatasetList);
 	}
     
 	public  SchoolDataset[] addProgram(String schoolID , String ranking, String school, String program, String lengthOfProgram, String totalTuition, String location, String toefl, String gre, String portfolio, String deadline) throws IOException {
-		
-		
+
+
 //		for(int i = 0; i < schoolDatasetList.length; i++) {
 //			//newschoolDataset[i] = new SchoolDataset(schoolDatasetList[i].schoolID, schoolDatasetList[i].ranking, schoolDatasetList[i].school, schoolDatasetList[i].program, schoolDatasetList[i].lengthOfProgram, schoolDatasetList[i].totalTuition, schoolDatasetList[i].location, schoolDatasetList[i].toefl, schoolDatasetList[i].gre, schoolDatasetList[i].portfolio, schoolDatasetList[i].deadline);
 //			System.out.println(schoolDatasetList[i]);
 //		}
 		
-		SchoolDataset[] newschoolDataset = new SchoolDataset[schoolDatasetList.length + 1];
+			SchoolDataset[] newschoolDataset = new SchoolDataset[schoolDatasetList.length + 1];
 		
-		for(int i = 0; i < schoolDatasetList.length; i++) {
-			newschoolDataset[i] = new SchoolDataset(schoolDatasetList[i].schoolID, schoolDatasetList[i].ranking, schoolDatasetList[i].school, schoolDatasetList[i].program, schoolDatasetList[i].lengthOfProgram, schoolDatasetList[i].totalTuition, schoolDatasetList[i].location, schoolDatasetList[i].toefl, schoolDatasetList[i].gre, schoolDatasetList[i].portfolio, schoolDatasetList[i].deadline);
-		}
-		newschoolDataset[newschoolDataset.length -1] = new SchoolDataset(schoolID, ranking, school, program, lengthOfProgram, totalTuition, location, toefl, gre, portfolio, deadline);
+			for(int i = 0; i < schoolDatasetList.length; i++) {
+				newschoolDataset[i] = new SchoolDataset(schoolDatasetList[i].schoolID, schoolDatasetList[i].ranking, schoolDatasetList[i].school, schoolDatasetList[i].program, schoolDatasetList[i].lengthOfProgram, schoolDatasetList[i].totalTuition, schoolDatasetList[i].location, schoolDatasetList[i].toefl, schoolDatasetList[i].gre, schoolDatasetList[i].portfolio, schoolDatasetList[i].deadline);
+			}
+			newschoolDataset[newschoolDataset.length -1] = new SchoolDataset(schoolID, ranking, school, program, lengthOfProgram, totalTuition, location, toefl, gre, portfolio, deadline);
 		
-//		File file = new File("UIUX school dataset.tsv");
-//	        // create FileWriter object with file as parameter
-//	        FileWriter outputfile = new FileWriter(file);
-//	  
-//	        // create CSVWriter object filewriter object as parameter
-//	      //  CSVWriter writer = new CSVWriter(outputfile);
-//	       
-//	        
-//	        
-//	        CSVWriter writer = new CSVWriter(outputfile, '\t', CSVWriter.NO_QUOTE_CHARACTER,
-//                    CSVWriter.DEFAULT_ESCAPE_CHARACTER,
-//                    CSVWriter.DEFAULT_LINE_END);
-//	  
-//	        //adding header to csv
-//	        String[] header = { "schoolID", "ranking", "school", "program", "lengthOfProgram", "totalTuition", "location", "toefl", "gre", "portfolio", "deadline" };
-//	        writer.writeNext(header);
-//	  
-//	        for (int i = 0; i < newschoolDataset.length; i++) {
-//	        	String[] data1 = {newschoolDataset[i].schoolID,newschoolDataset[i].ranking, newschoolDataset[i].school, newschoolDataset[i].program,newschoolDataset[i].lengthOfProgram, newschoolDataset[i].totalTuition, newschoolDataset[i].location, newschoolDataset[i].toefl, newschoolDataset[i].gre, newschoolDataset[i].portfolio, newschoolDataset[i].deadline };
-//	        	writer.writeNext(data1);
-//	        }
-//	        writer.flush();
-//	        writer.close();
+			writeFile(newschoolDataset);
 	        
-	    schoolDatasetList = newschoolDataset;
+	    	schoolDatasetList = newschoolDataset;
 	    return schoolDatasetList;
 	}
 	
