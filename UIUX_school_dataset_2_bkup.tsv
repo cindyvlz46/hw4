@@ -1,4 +1,4 @@
-schoolID	ranking	school	program	lengthOfProgram	totalTuition	location	toefl	gre	portfolio	deadline
+School_ID	Ranking	School	Program	Length_Of_Program	Total_Tuition	Location	TOEFL 	GRE 	Portfolio 	Deadline
 001	1	Camegie Mellon University	Master of Human-Computer Interaction (MHCI)	1	 $ 72,000 	Pittsburgh PA	100	Y	Optional	Jan 20, 2022
 001	2	Camegie Mellon University	Master of Design (MDes)	2	 $ 84,000 	Pittsburgh PA	102	Y	Required	Jan 15, 2022
 002	3	University of Washington	Master of Human-Computer Interaction and Design (MHCID)	1	 $ 52,704 	Seattle WA	106	N	Optional	Jan 16, 2022

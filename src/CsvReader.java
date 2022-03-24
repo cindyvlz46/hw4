@@ -9,7 +9,7 @@ public class CsvReader {
         SchoolDataset[] schoolDatasetList = {};
 
         // CSV reader for dataset
-        try (BufferedReader br = new BufferedReader(new FileReader("D:\\UIC\\IDS 517 Enterprise Application Development\\IDS517_team_13_HW4A\\UIUX_school_dataset_2.tsv"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("/Users/reinhardt.vanwyk/Slalom/Personal/hw4/UIUX_school_dataset_2.tsv"))) {
             String line;
             // read line to skip the header
             br.readLine();
